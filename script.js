@@ -18,25 +18,29 @@ const jeux = {
         {
             image: "👩",
             bonne: ["MAMAN"],
-            choix: ["MAMAN", "PAPA", "CHAT", "SAC"]
+            choix: ["MAMAN", "PAPA", "CHAT", "SAC"],
+            son: "maman"
         },
 
         {
             image: "👨",
             bonne: ["PAPA"],
-            choix: ["PAPA", "MAMAN", "LIVRE", "MOTO"]
+            choix: ["PAPA", "MAMAN", "LIVRE", "MOTO"],
+            son: "papa"
         },
 
         {
             image: "🐱",
             bonne: ["CHAT"],
-            choix: ["CHAT", "CHIEN", "SAC", "LAPIN"]
+            choix: ["CHAT", "CHIEN", "SAC", "LAPIN"],
+            son: "chat"
         },
 
         {
             image: "🏍️",
             bonne: ["MOTO"],
-            choix: ["MOTO", "MAISON", "CHAT", "VELO"]
+            choix: ["MOTO", "MAISON", "CHAT", "VELO"],
+            son: "moto"
         },
 
         {
@@ -47,7 +51,8 @@ const jeux = {
                 "ECOLE",
                 "LIVRE",
                 "TABLE"
-            ]
+            ],
+            son: "cartable"
         },
 
         {
@@ -58,7 +63,8 @@ const jeux = {
                 "BANANE",
                 "POMME",
                 "POIRE"
-            ]
+            ],
+            son: "citron"
         },
 
         {
@@ -69,7 +75,8 @@ const jeux = {
                 "CARTABLE",
                 "MANTEAU",
                 "CHAUSSURE"
-            ]
+            ],
+            son: "chapeau"
         }
 
     ],
@@ -85,79 +92,90 @@ const jeux = {
         {
             image: "👩",
             bonne: ["MA", "MAN"],
-            choix: ["MA", "MAN", "PA", "LO"]
+            choix: ["MA", "MAN", "PA", "LO"],
+            son: "maman"
         },
 
         // PAPA
         // IMPORTANT :
-        // deux PA sont nécessaires
+        // Il faut DEUX cartes PA.
         {
             image: "👨",
             bonne: ["PA", "PA"],
-            choix: ["PA", "PA", "MA", "LO"]
+            choix: ["PA", "PA", "MA", "LO"],
+            son: "papa"
         },
 
         // MOTO
         {
             image: "🏍️",
             bonne: ["MO", "TO"],
-            choix: ["MO", "TO", "MA", "PA"]
+            choix: ["MO", "TO", "MA", "PA"],
+            son: "moto"
         },
 
         // BANANE
         {
             image: "🍌",
             bonne: ["BA", "NA", "NE"],
-            choix: ["BA", "NA", "NE", "MA"]
+            choix: ["BA", "NA", "NE", "MA"],
+            son: "banane"
         },
 
         // CARTABLE
         {
             image: "🎒",
             bonne: ["CAR", "TA", "BLE"],
-            choix: ["CAR", "TA", "BLE", "MA"]
+            choix: ["CAR", "TA", "BLE", "MA"],
+            son: "cartable"
         },
 
         // CHAPEAU
         {
             image: "🎩",
             bonne: ["CHA", "PEAU"],
-            choix: ["CHA", "PEAU", "PA", "LO"]
+            choix: ["CHA", "PEAU", "PA", "LO"],
+            son: "chapeau"
         },
 
         // CITRON
         {
             image: "🍋",
             bonne: ["CI", "TRON"],
-            choix: ["CI", "TRON", "TA", "BLE"]
+            choix: ["CI", "TRON", "TA", "BLE"],
+            son: "citron"
         },
 
         // BONJOUR
         {
             image: "👋",
             bonne: ["BON", "JOUR"],
-            choix: ["BON", "JOUR", "MA", "PA"]
+            choix: ["BON", "JOUR", "MA", "PA"],
+            son: "bonjour"
         },
 
         // MAISON
         {
             image: "🏠",
             bonne: ["MAI", "SON"],
-            choix: ["MAI", "SON", "MA", "PA"]
+            choix: ["MAI", "SON", "MA", "PA"],
+            son: "maison"
         },
 
         // MATIN
         {
             image: "🌅",
             bonne: ["MA", "TIN"],
-            choix: ["MA", "TIN", "TA", "LO"]
+            choix: ["MA", "TIN", "TA", "LO"],
+            son: "matin"
         },
 
         // PORTE
         {
             image: "🚪",
             bonne: ["PORTE"],
-            choix: ["PORTE", "PA", "MA", "LO"]
+            choix: ["PORTE", "PA", "MA", "LO"],
+            son: "porte"
         }
 
     ],
@@ -180,7 +198,8 @@ const jeux = {
                 "dort",
                 "Le",
                 "chat"
-            ]
+            ],
+            son: "Le chat dort."
         },
 
         {
@@ -196,7 +215,8 @@ const jeux = {
                 "Papa",
                 "un",
                 "lit"
-            ]
+            ],
+            son: "Papa lit un livre."
         },
 
         {
@@ -212,7 +232,8 @@ const jeux = {
                 "une",
                 "Maman",
                 "mange"
-            ]
+            ],
+            son: "Maman mange une pomme."
         },
 
         {
@@ -228,7 +249,8 @@ const jeux = {
                 "Ali",
                 "au",
                 "joue"
-            ]
+            ],
+            son: "Ali joue au ballon."
         },
 
         {
@@ -244,7 +266,8 @@ const jeux = {
                 "va",
                 "Lina",
                 "à"
-            ]
+            ],
+            son: "Lina va à l'école."
         },
 
         {
@@ -262,7 +285,8 @@ const jeux = {
                 "boit",
                 "bébé",
                 "du"
-            ]
+            ],
+            son: "Le bébé boit du lait."
         },
 
         {
@@ -278,7 +302,8 @@ const jeux = {
                 "Papa",
                 "le",
                 "mange"
-            ]
+            ],
+            son: "Papa mange le repas."
         }
 
     ]
@@ -297,6 +322,52 @@ let numero = 0;
 let reponse = [];
 
 let score = 0;
+
+
+// =====================================================
+// VOIX FRANÇAISE
+// =====================================================
+
+let voixFrancaise = null;
+
+
+// Recherche d'une voix française disponible
+function chargerVoixFrancaise() {
+
+    if (!("speechSynthesis" in window)) {
+        return;
+    }
+
+    const voix =
+        window.speechSynthesis.getVoices();
+
+
+    // Chercher une voix française
+    voixFrancaise =
+        voix.find(function(v) {
+
+            return v.lang &&
+                   v.lang.toLowerCase()
+                   .startsWith("fr");
+
+        });
+
+
+    // Si aucune voix française
+    // n'est trouvée, on utilisera
+    // la voix par défaut.
+}
+
+
+// Certaines versions de Chrome/Android
+// chargent les voix après le démarrage.
+if ("speechSynthesis" in window) {
+
+    chargerVoixFrancaise();
+
+    window.speechSynthesis.onvoiceschanged =
+        chargerVoixFrancaise;
+}
 
 
 // =====================================================
@@ -322,25 +393,33 @@ function afficherJeu(type) {
 
 function afficher() {
 
-    const jeu = jeux[niveau][numero];
+    const jeu =
+        jeux[niveau][numero];
 
 
+    // =================================================
     // IMAGE
+    // =================================================
 
-    document.getElementById("image").textContent =
-        jeu.image;
+    document.getElementById(
+        "image"
+    ).textContent = jeu.image;
 
 
+    // =================================================
     // TITRE
+    // =================================================
 
     const question =
-        document.getElementById("question");
+        document.getElementById(
+            "question"
+        );
 
 
     if (niveau === "mots") {
 
         question.textContent =
-            "Construis le mot";
+            "Trouve le mot";
 
     }
 
@@ -359,10 +438,14 @@ function afficher() {
     }
 
 
-    // INSTRUCTION
+    // =================================================
+    // CONSIGNE
+    // =================================================
 
     const info =
-        document.getElementById("info-niveau");
+        document.getElementById(
+            "info-niveau"
+        );
 
 
     if (niveau === "mots") {
@@ -387,7 +470,9 @@ function afficher() {
     }
 
 
+    // =================================================
     // RESET
+    // =================================================
 
     document.getElementById(
         "construction"
@@ -399,81 +484,109 @@ function afficher() {
     ).textContent = "";
 
 
+    // =================================================
     // ZONE DES CARTES
+    // =================================================
 
     const zone =
-        document.getElementById("mots");
+        document.getElementById(
+            "mots"
+        );
+
 
     zone.innerHTML = "";
 
 
+    // =================================================
+    // MÉLANGER LES CARTES
+    //
     // IMPORTANT :
-    // On crée une carte pour CHAQUE occurrence.
+    // Les doublons sont conservés.
     //
-    // Exemple :
-    // ["PA","PA"]
+    // PAPA :
+    // ["PA", "PA", "MA", "LO"]
     //
-    // donnera :
-    //
-    // [PA] [PA]
-    //
-    // et non une seule carte PA.
+    // donne bien deux cartes PA.
+    // =================================================
 
     const choix =
-        melanger([...jeu.choix]);
+        melanger(
+            [...jeu.choix]
+        );
 
 
-    choix.forEach(function(element, index) {
+    choix.forEach(
+        function(element, index) {
 
-        const bouton =
-            document.createElement("button");
-
-
-        bouton.className = "mot";
-
-
-        bouton.textContent =
-            element;
-
-
-        // Identifiant unique
-        bouton.dataset.id =
-            index;
-
-
-        bouton.onclick =
-            function() {
-
-                // Ne pas réutiliser
-                // le même bouton.
-
-                if (
-                    bouton.classList.contains(
-                        "utilise"
-                    )
-                ) {
-
-                    return;
-
-                }
-
-
-                reponse.push(element);
-
-
-                bouton.classList.add(
-                    "utilise"
+            const bouton =
+                document.createElement(
+                    "button"
                 );
 
 
-                afficherConstruction();
+            bouton.className =
+                "mot";
 
-            };
+
+            bouton.textContent =
+                element;
 
 
-        zone.appendChild(bouton);
+            // Identifiant unique
+            bouton.dataset.id =
+                index;
 
-    });
+
+            // =================================================
+            // CLIC SUR UNE CARTE
+            // =================================================
+
+            bouton.onclick =
+                function() {
+
+                    // Si cette carte a déjà
+                    // été utilisée, ne rien faire.
+
+                    if (
+                        bouton.classList.contains(
+                            "utilise"
+                        )
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    // Ajouter la carte
+                    // à la réponse.
+
+                    reponse.push(
+                        element
+                    );
+
+
+                    // Marquer cette carte
+                    // comme utilisée.
+
+                    bouton.classList.add(
+                        "utilise"
+                    );
+
+
+                    // Afficher la construction.
+
+                    afficherConstruction();
+
+                };
+
+
+            zone.appendChild(
+                bouton
+            );
+
+        }
+    );
 
 }
 
@@ -493,23 +606,29 @@ function afficherConstruction() {
     zone.innerHTML = "";
 
 
-    reponse.forEach(function(element) {
+    reponse.forEach(
+        function(element) {
 
-        const span =
-            document.createElement("span");
-
-
-        span.className =
-            "mot";
-
-
-        span.textContent =
-            element;
+            const span =
+                document.createElement(
+                    "span"
+                );
 
 
-        zone.appendChild(span);
+            span.className =
+                "mot";
 
-    });
+
+            span.textContent =
+                element;
+
+
+            zone.appendChild(
+                span
+            );
+
+        }
+    );
 
 }
 
@@ -520,11 +639,17 @@ function afficherConstruction() {
 
 function verifier() {
 
+    const jeu =
+        jeux[niveau][numero];
+
+
     const bonne =
-        jeux[niveau][numero].bonne;
+        jeu.bonne;
 
 
-    // Pas assez d'éléments
+    // =================================================
+    // PAS ASSEZ D'ÉLÉMENTS
+    // =================================================
 
     if (
         reponse.length <
@@ -541,7 +666,9 @@ function verifier() {
     }
 
 
-    // Trop d'éléments
+    // =================================================
+    // TROP D'ÉLÉMENTS
+    // =================================================
 
     if (
         reponse.length >
@@ -558,7 +685,9 @@ function verifier() {
     }
 
 
-    // Comparaison
+    // =================================================
+    // COMPARAISON
+    // =================================================
 
     let correct = true;
 
@@ -604,7 +733,9 @@ function verifier() {
             "🎉 Bravo ! Très bien !";
 
 
-        // Prononcer le mot ou la phrase
+        // Prononcer le mot complet
+        // ou la phrase complète.
+
         ecouter();
 
     }
@@ -712,10 +843,50 @@ function melanger(tableau) {
 
 function ecouter() {
 
-    const texte =
-        jeux[niveau][numero]
-        .bonne
-        .join(" ");
+    const jeu =
+        jeux[niveau][numero];
+
+
+    // Utiliser le texte spécialement
+    // prévu pour la prononciation.
+    //
+    // Exemple :
+    //
+    // bonne = ["PA", "PA"]
+    //
+    // son = "papa"
+    //
+    // Le téléphone dira :
+    // "papa"
+    //
+    // et PAS :
+    // "PA PA"
+
+    let texte =
+        jeu.son;
+
+
+    // Sécurité :
+    // si son n'existe pas,
+    // reconstruire le texte.
+
+    if (!texte) {
+
+        if (niveau === "mots") {
+
+            texte =
+                jeu.bonne.join("");
+
+        }
+
+        else {
+
+            texte =
+                jeu.bonne.join(" ");
+
+        }
+
+    }
 
 
     parler(texte);
@@ -724,10 +895,13 @@ function ecouter() {
 
 
 // =====================================================
-// PRONONCER UN MOT / UNE PHRASE
+// PRONONCER UN MOT OU UNE PHRASE
 // =====================================================
 
 function parler(texte) {
+
+    // Vérifier si la synthèse vocale
+    // existe sur le navigateur.
 
     if (
         !("speechSynthesis" in window)
@@ -743,37 +917,71 @@ function parler(texte) {
     }
 
 
-    // Arrêter une ancienne lecture
+    // Arrêter toute ancienne lecture.
 
     window.speechSynthesis.cancel();
 
 
-    const voix =
-        new SpeechSynthesisUtterance(
-            texte
-        );
+    // Petit délai pour certains
+    // navigateurs Android.
+
+    setTimeout(
+        function() {
+
+            const voix =
+                new SpeechSynthesisUtterance(
+                    texte
+                );
 
 
-    // Français
+            // =================================================
+            // LANGUE FRANÇAISE
+            // =================================================
 
-    voix.lang = "fr-FR";
-
-
-    // Vitesse plus lente
-    // pour l'enfant
-
-    voix.rate = 0.72;
+            voix.lang = "fr-FR";
 
 
-    // Ton légèrement naturel
+            // Utiliser une vraie voix
+            // française si elle existe.
 
-    voix.pitch = 1;
+            if (voixFrancaise) {
+
+                voix.voice =
+                    voixFrancaise;
+
+            }
 
 
-    // Lancer
+            // =================================================
+            // VITESSE
+            // =================================================
 
-    window.speechSynthesis.speak(
-        voix
+            // 0.70 = assez lent pour
+            // un enfant.
+
+            voix.rate = 0.70;
+
+
+            // Ton normal.
+
+            voix.pitch = 1;
+
+
+            // Volume maximum.
+
+            voix.volume = 1;
+
+
+            // =================================================
+            // LECTURE
+            // =================================================
+
+            window.speechSynthesis.speak(
+                voix
+            );
+
+        },
+        100
     );
 
 }
