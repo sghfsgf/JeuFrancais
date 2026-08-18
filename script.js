@@ -179,10 +179,37 @@ const jeux = {
         }
 
     ],
+// =================================================
+// NIVEAU 3 : COULEURS
+// =================================================
 
+couleurs: [
+
+    {
+        image: "🍎",
+        bonne: ["ROUGE"],
+        choix: ["ROUGE", "BLEU", "JAUNE"],
+        son: "rouge. La pomme est rouge."
+    },
+
+    {
+        image: "🌤️",
+        bonne: ["BLEU"],
+        choix: ["BLEU", "ROUGE", "JAUNE"],
+        son: "bleu. Le ciel est bleu."
+    },
+
+    {
+        image: "☀️",
+        bonne: ["JAUNE"],
+        choix: ["JAUNE", "ROUGE", "BLEU"],
+        son: "jaune. Le soleil est jaune."
+    }
+
+]
 
     // =================================================
-    // NIVEAU 3 : PHRASES
+    // NIVEAU 4 : PHRASES
     // =================================================
 
     phrases: [
