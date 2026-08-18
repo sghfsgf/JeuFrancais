@@ -206,3 +206,63 @@ footer {
         margin: 5px auto;
     }
 }
+/* =====================================================
+   COULEURS
+===================================================== */
+
+.carte-couleur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 130px;
+    min-height: 150px;
+
+    border: 3px solid #ddd;
+    border-radius: 18px;
+
+    background: white;
+
+    padding: 15px;
+    margin: 8px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+.carte-couleur:hover {
+    transform: scale(1.05);
+}
+
+.image-couleur {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.nom-couleur {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Rouge */
+
+.carte-rouge {
+    border-color: #e53935;
+}
+
+/* Bleu */
+
+.carte-bleu {
+    border-color: #1e88e5;
+}
+
+/* Jaune */
+
+.carte-jaune {
+    border-color: #fbc02d;
+}
