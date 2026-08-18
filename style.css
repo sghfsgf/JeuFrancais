@@ -10,7 +10,9 @@ body {
     text-align: center;
 }
 
-/* HEADER */
+/* =====================================================
+   HEADER
+===================================================== */
 
 header {
     background: #ff8c00;
@@ -28,7 +30,9 @@ header p {
     font-size: 16px;
 }
 
-/* MENU */
+/* =====================================================
+   MENU
+===================================================== */
 
 nav {
     display: flex;
@@ -46,9 +50,16 @@ nav button {
     padding: 12px 15px;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-/* CONTENU */
+nav button:active {
+    transform: scale(0.95);
+}
+
+/* =====================================================
+   CONTENU
+===================================================== */
 
 main {
     width: 95%;
@@ -61,7 +72,7 @@ main {
     margin-top: 15px;
     padding: 20px;
     border-radius: 18px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
 
 #image {
@@ -73,7 +84,19 @@ main {
     font-size: 20px;
 }
 
-/* CONSTRUCTION */
+/* =====================================================
+   CONSIGNE
+===================================================== */
+
+#info-niveau {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* =====================================================
+   CONSTRUCTION
+===================================================== */
 
 #construction {
     min-height: 65px;
@@ -88,7 +111,9 @@ main {
     gap: 8px;
 }
 
-/* MOTS */
+/* =====================================================
+   MOTS / SYLLABES / PHRASES
+===================================================== */
 
 #mots {
     display: flex;
@@ -105,6 +130,7 @@ main {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.15s;
 }
 
 .mot:active {
@@ -115,7 +141,67 @@ main {
     opacity: 0.35;
 }
 
-/* BOUTONS */
+/* =====================================================
+   COULEURS
+===================================================== */
+
+.carte-couleur {
+    width: 130px;
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border: 4px solid #ddd;
+    border-radius: 18px;
+
+    padding: 15px;
+    margin: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.carte-couleur:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.carte-couleur:active {
+    transform: scale(0.95);
+}
+
+/* ROUGE */
+
+.carte-rouge {
+    border-color: #e53935;
+}
+
+/* BLEU */
+
+.carte-bleu {
+    border-color: #1e88e5;
+}
+
+/* JAUNE */
+
+.carte-jaune {
+    border-color: #fbc02d;
+}
+
+/* =====================================================
+   BOUTONS D'ACTION
+===================================================== */
 
 .actions {
     margin-top: 15px;
@@ -126,61 +212,97 @@ main {
     border-radius: 12px;
     padding: 13px 16px;
     margin: 5px;
+
     font-size: 17px;
     font-weight: bold;
+
     cursor: pointer;
 }
+
+.actions button:active {
+    transform: scale(0.95);
+}
+
+/* Vérifier */
 
 .actions button:nth-child(1) {
     background: #28a745;
     color: white;
 }
 
+/* Effacer */
+
 .actions button:nth-child(2) {
     background: #dc3545;
     color: white;
 }
+
+/* Écouter */
 
 .actions button:nth-child(3) {
     background: #007bff;
     color: white;
 }
 
+/* Suivant */
+
 .actions button:nth-child(4) {
     background: #ff8c00;
     color: white;
 }
 
-/* MESSAGE */
+/* =====================================================
+   MESSAGE
+===================================================== */
 
 #message {
     min-height: 45px;
     margin-top: 15px;
+
     font-size: 20px;
     font-weight: bold;
 }
 
+/* =====================================================
+   SCORE
+===================================================== */
+
 #score {
     margin-top: 10px;
+
     font-size: 18px;
     font-weight: bold;
 }
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
     margin-top: 25px;
     padding: 15px;
+
     background: #333;
     color: white;
 }
 
-/* SMARTPHONE */
+/* =====================================================
+   SMARTPHONE
+===================================================== */
 
 @media (max-width: 480px) {
 
     header h1 {
         font-size: 21px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        gap: 6px;
+        padding: 10px;
     }
 
     nav button {
@@ -196,73 +318,41 @@ footer {
         font-size: 55px;
     }
 
+    #question {
+        font-size: 18px;
+    }
+
+    #info-niveau {
+        font-size: 14px;
+    }
+
     .mot {
         font-size: 18px;
         padding: 12px 14px;
+    }
+
+    /* Cartes couleurs sur smartphone */
+
+    .carte-couleur {
+        width: 100px;
+        min-height: 125px;
+
+        padding: 10px;
+        margin: 4px;
+
+        font-size: 17px;
     }
 
     .actions button {
         width: 90%;
         margin: 5px auto;
     }
-}
-/* =====================================================
-   COULEURS
-===================================================== */
 
-.carte-couleur {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    #message {
+        font-size: 18px;
+    }
 
-    width: 130px;
-    min-height: 150px;
-
-    border: 3px solid #ddd;
-    border-radius: 18px;
-
-    background: white;
-
-    padding: 15px;
-    margin: 8px;
-
-    font-size: 20px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: transform 0.2s;
-}
-
-.carte-couleur:hover {
-    transform: scale(1.05);
-}
-
-.image-couleur {
-    font-size: 55px;
-    margin-bottom: 10px;
-}
-
-.nom-couleur {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Rouge */
-
-.carte-rouge {
-    border-color: #e53935;
-}
-
-/* Bleu */
-
-.carte-bleu {
-    border-color: #1e88e5;
-}
-
-/* Jaune */
-
-.carte-jaune {
-    border-color: #fbc02d;
+    #score {
+        font-size: 17px;
+    }
 }
