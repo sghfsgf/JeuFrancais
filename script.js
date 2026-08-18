@@ -183,7 +183,7 @@ const jeux = {
         },
 
         {
-            image: "🌤️",
+           image: "🔵☁️",
             bonne: ["BLEU"],
             choix: ["BLEU", "ROUGE", "JAUNE"],
             son: "bleu. Le ciel est bleu.",
