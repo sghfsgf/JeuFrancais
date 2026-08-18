@@ -1,0 +1,17 @@
+{
+  "name": "Je joue et j'apprends le français",
+  "short_name": "Jeu Français",
+  "description": "Jeu éducatif de français pour enfants",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff8c00",
+  "icons": [
+    {
+      "src": "icone.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
