@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color"
+          content="#ff8c00">
+
+    <meta name="description"
+          content="Jeu éducatif de français pour enfants de 7 à 9 ans">
+
     <title>Je joue et j'apprends le français</title>
 
+    <!-- Feuille de style -->
     <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="icone.png">
 
-<link rel="apple-touch-icon" href="icone.png">
+    <!-- Icône du site -->
+    <link rel="icon"
+          type="image/png"
+          href="icone.png">
 
-<link rel="manifest" href="manifest.json">
-    
+    <!-- Icône sur l'écran d'accueil -->
+    <link rel="apple-touch-icon"
+          href="icone.png">
+
+    <!-- Configuration de l'application -->
+    <link rel="manifest"
+          href="manifest.json">
+
 </head>
+
 
 <body>
 
+
+<!-- ==================================================
+     EN-TÊTE
+================================================== -->
+
 <header>
+
     <h1>🇫🇷 Je joue et j'apprends</h1>
-    <p>Français – 3e année primaire</p>
+
+    <p>
+        Français – 3e année primaire
+    </p>
+
 </header>
 
+
+<!-- ==================================================
+     MENU
+================================================== -->
+
 <nav>
+
     <button onclick="afficherJeu('mots')">
         🧩 Mots
     </button>
@@ -35,21 +70,50 @@
     <button onclick="afficherJeu('phrases')">
         📝 Phrases
     </button>
+
 </nav>
+
+
+<!-- ==================================================
+     CONTENU PRINCIPAL
+================================================== -->
 
 <main>
 
     <div id="jeu">
 
-        <div id="image">🐱</div>
 
+        <!-- IMAGE -->
+        <div id="image">
+            🐱
+        </div>
+
+
+        <!-- QUESTION -->
         <h2 id="question">
             Construis le mot
         </h2>
 
-        <div id="construction"></div>
 
-        <div id="mots"></div>
+        <!-- CONSIGNE -->
+        <div id="info-niveau">
+            👆 Choisis les éléments dans le bon ordre.
+        </div>
+
+
+        <!-- MOT / PHRASE EN CONSTRUCTION -->
+        <div id="construction">
+        </div>
+
+
+        <!-- CARTES -->
+        <div id="mots">
+        </div>
+
+
+        <!-- ==================================================
+             BOUTONS
+        ================================================== -->
 
         <div class="actions">
 
@@ -71,21 +135,41 @@
 
         </div>
 
-        <div id="message"></div>
 
+        <!-- MESSAGE -->
+        <div id="message">
+        </div>
+
+
+        <!-- SCORE -->
         <div id="score">
             ⭐ Score : 0
         </div>
+
 
     </div>
 
 </main>
 
+
+<!-- ==================================================
+     PIED DE PAGE
+================================================== -->
+
 <footer>
+
     Français – Apprendre en jouant ❤️
+
 </footer>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
 
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
