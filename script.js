@@ -88,7 +88,6 @@ const jeux = {
 
     syllabes: [
 
-        // MAMAN
         {
             image: "👩",
             bonne: ["MA", "MAN"],
@@ -96,9 +95,6 @@ const jeux = {
             son: "maman"
         },
 
-        // PAPA
-        // IMPORTANT :
-        // Il faut DEUX cartes PA.
         {
             image: "👨",
             bonne: ["PA", "PA"],
@@ -106,7 +102,6 @@ const jeux = {
             son: "papa"
         },
 
-        // MOTO
         {
             image: "🏍️",
             bonne: ["MO", "TO"],
@@ -114,7 +109,6 @@ const jeux = {
             son: "moto"
         },
 
-        // BANANE
         {
             image: "🍌",
             bonne: ["BA", "NA", "NE"],
@@ -122,7 +116,6 @@ const jeux = {
             son: "banane"
         },
 
-        // CARTABLE
         {
             image: "🎒",
             bonne: ["CAR", "TA", "BLE"],
@@ -130,7 +123,6 @@ const jeux = {
             son: "cartable"
         },
 
-        // CHAPEAU
         {
             image: "🎩",
             bonne: ["CHA", "PEAU"],
@@ -138,7 +130,6 @@ const jeux = {
             son: "chapeau"
         },
 
-        // CITRON
         {
             image: "🍋",
             bonne: ["CI", "TRON"],
@@ -146,7 +137,6 @@ const jeux = {
             son: "citron"
         },
 
-        // BONJOUR
         {
             image: "👋",
             bonne: ["BON", "JOUR"],
@@ -154,7 +144,6 @@ const jeux = {
             son: "bonjour"
         },
 
-        // MAISON
         {
             image: "🏠",
             bonne: ["MAI", "SON"],
@@ -162,7 +151,6 @@ const jeux = {
             son: "maison"
         },
 
-        // MATIN
         {
             image: "🌅",
             bonne: ["MA", "TIN"],
@@ -170,7 +158,6 @@ const jeux = {
             son: "matin"
         },
 
-        // PORTE
         {
             image: "🚪",
             bonne: ["PORTE"],
@@ -179,34 +166,40 @@ const jeux = {
         }
 
     ],
-// =================================================
-// NIVEAU 3 : COULEURS
-// =================================================
 
-couleurs: [
 
-    {
-        image: "🍎",
-        bonne: ["ROUGE"],
-        choix: ["ROUGE", "BLEU", "JAUNE"],
-        son: "rouge. La pomme est rouge."
-    },
+    // =================================================
+    // NIVEAU 3 : COULEURS
+    // =================================================
 
-    {
-        image: "🌤️",
-        bonne: ["BLEU"],
-        choix: ["BLEU", "ROUGE", "JAUNE"],
-        son: "bleu. Le ciel est bleu."
-    },
+    couleurs: [
 
-    {
-        image: "☀️",
-        bonne: ["JAUNE"],
-        choix: ["JAUNE", "ROUGE", "BLEU"],
-        son: "jaune. Le soleil est jaune."
-    }
+        {
+            image: "🍎",
+            bonne: ["ROUGE"],
+            choix: ["ROUGE", "BLEU", "JAUNE"],
+            son: "rouge. La pomme est rouge.",
+            classe: "carte-rouge"
+        },
 
-]
+        {
+            image: "🌤️",
+            bonne: ["BLEU"],
+            choix: ["BLEU", "ROUGE", "JAUNE"],
+            son: "bleu. Le ciel est bleu.",
+            classe: "carte-bleu"
+        },
+
+        {
+            image: "☀️",
+            bonne: ["JAUNE"],
+            choix: ["JAUNE", "ROUGE", "BLEU"],
+            son: "jaune. Le soleil est jaune.",
+            classe: "carte-jaune"
+        }
+
+    ],
+
 
     // =================================================
     // NIVEAU 4 : PHRASES
@@ -343,11 +336,8 @@ couleurs: [
 // =====================================================
 
 let niveau = "mots";
-
 let numero = 0;
-
 let reponse = [];
-
 let score = 0;
 
 
@@ -358,7 +348,6 @@ let score = 0;
 let voixFrancaise = null;
 
 
-// Recherche d'une voix française disponible
 function chargerVoixFrancaise() {
 
     if (!("speechSynthesis" in window)) {
@@ -368,26 +357,18 @@ function chargerVoixFrancaise() {
     const voix =
         window.speechSynthesis.getVoices();
 
-
-    // Chercher une voix française
     voixFrancaise =
         voix.find(function(v) {
 
             return v.lang &&
-                   v.lang.toLowerCase()
-                   .startsWith("fr");
+                   v.lang.toLowerCase().startsWith("fr");
 
         });
-
-
-    // Si aucune voix française
-    // n'est trouvée, on utilisera
-    // la voix par défaut.
 }
 
 
-// Certaines versions de Chrome/Android
-// chargent les voix après le démarrage.
+// Chargement initial des voix
+
 if ("speechSynthesis" in window) {
 
     chargerVoixFrancaise();
@@ -410,7 +391,6 @@ function afficherJeu(type) {
     reponse = [];
 
     afficher();
-
 }
 
 
@@ -438,9 +418,7 @@ function afficher() {
     // =================================================
 
     const question =
-        document.getElementById(
-            "question"
-        );
+        document.getElementById("question");
 
 
     if (niveau === "mots") {
@@ -457,7 +435,14 @@ function afficher() {
 
     }
 
-    else {
+    else if (niveau === "couleurs") {
+
+        question.textContent =
+            "Trouve la couleur";
+
+    }
+
+    else if (niveau === "phrases") {
 
         question.textContent =
             "Construis la phrase";
@@ -470,45 +455,47 @@ function afficher() {
     // =================================================
 
     const info =
-        document.getElementById(
-            "info-niveau"
-        );
+        document.getElementById("info-niveau");
 
 
     if (niveau === "mots") {
 
-    question.textContent =
-        "Trouve le mot";
+        info.textContent =
+            "👆 Choisis le mot correspondant à l'image.";
 
-}
+    }
 
-else if (niveau === "syllabes") {
+    else if (niveau === "syllabes") {
 
-    question.textContent =
-        "Construis le mot avec les syllabes";
+        info.textContent =
+            "👆 Choisis les syllabes dans le bon ordre.";
 
-}
-else if (niveau === "couleurs") {
+    }
 
-    question.textContent =
-        "Trouve la couleur";
+    else if (niveau === "couleurs") {
 
-}
-else if (niveau === "phrases") {
+        info.textContent =
+            "👆 Choisis la couleur correspondant à l'image.";
 
-    question.textContent =
-        "Construis la phrase";
+    }
 
-}
+    else if (niveau === "phrases") {
+
+        info.textContent =
+            "👆 Choisis les mots dans le bon ordre.";
+
+    }
+
 
     // =================================================
     // RESET
     // =================================================
 
+    reponse = [];
+
     document.getElementById(
         "construction"
     ).innerHTML = "";
-
 
     document.getElementById(
         "message"
@@ -520,43 +507,69 @@ else if (niveau === "phrases") {
     // =================================================
 
     const zone =
-        document.getElementById(
-            "mots"
-        );
-
+        document.getElementById("mots");
 
     zone.innerHTML = "";
 
 
     // =================================================
-    // MÉLANGER LES CARTES
-    //
-    // IMPORTANT :
-    // Les doublons sont conservés.
-    //
-    // PAPA :
-    // ["PA", "PA", "MA", "LO"]
-    //
-    // donne bien deux cartes PA.
+    // MÉLANGER LES CHOIX
     // =================================================
 
     const choix =
-        melanger(
-            [...jeu.choix]
-        );
+        melanger([...jeu.choix]);
 
 
     choix.forEach(
         function(element, index) {
 
             const bouton =
-                document.createElement(
-                    "button"
-                );
+                document.createElement("button");
 
 
-            bouton.className =
-                "mot";
+            // =================================================
+            // STYLE NORMAL / COULEURS
+            // =================================================
+
+            if (niveau === "couleurs") {
+
+                bouton.className =
+                    "mot carte-couleur";
+
+                // Donner une couleur visuelle
+                // à chaque bouton.
+
+                if (element === "ROUGE") {
+
+                    bouton.classList.add(
+                        "carte-rouge"
+                    );
+
+                }
+
+                else if (element === "BLEU") {
+
+                    bouton.classList.add(
+                        "carte-bleu"
+                    );
+
+                }
+
+                else if (element === "JAUNE") {
+
+                    bouton.classList.add(
+                        "carte-jaune"
+                    );
+
+                }
+
+            }
+
+            else {
+
+                bouton.className = "mot";
+
+            }
 
 
             bouton.textContent =
@@ -575,13 +588,8 @@ else if (niveau === "phrases") {
             bouton.onclick =
                 function() {
 
-                    // Si cette carte a déjà
-                    // été utilisée, ne rien faire.
-
                     if (
-                        bouton.classList.contains(
-                            "utilise"
-                        )
+                        bouton.classList.contains("utilise")
                     ) {
 
                         return;
@@ -589,36 +597,29 @@ else if (niveau === "phrases") {
                     }
 
 
-                    // Ajouter la carte
-                    // à la réponse.
+                    // Ajouter la réponse
 
-                    reponse.push(
-                        element
-                    );
+                    reponse.push(element);
 
 
-                    // Marquer cette carte
-                    // comme utilisée.
+                    // Désactiver la carte
 
                     bouton.classList.add(
                         "utilise"
                     );
 
 
-                    // Afficher la construction.
+                    // Afficher la construction
 
                     afficherConstruction();
 
                 };
 
 
-            zone.appendChild(
-                bouton
-            );
+            zone.appendChild(bouton);
 
         }
     );
-
 }
 
 
@@ -629,9 +630,7 @@ else if (niveau === "phrases") {
 function afficherConstruction() {
 
     const zone =
-        document.getElementById(
-            "construction"
-        );
+        document.getElementById("construction");
 
 
     zone.innerHTML = "";
@@ -641,9 +640,7 @@ function afficherConstruction() {
         function(element) {
 
             const span =
-                document.createElement(
-                    "span"
-                );
+                document.createElement("span");
 
 
             span.className =
@@ -654,13 +651,10 @@ function afficherConstruction() {
                 element;
 
 
-            zone.appendChild(
-                span
-            );
+            zone.appendChild(span);
 
         }
     );
-
 }
 
 
@@ -683,8 +677,7 @@ function verifier() {
     // =================================================
 
     if (
-        reponse.length <
-        bonne.length
+        reponse.length < bonne.length
     ) {
 
         document.getElementById(
@@ -693,7 +686,6 @@ function verifier() {
             "👆 Choisis tous les éléments.";
 
         return;
-
     }
 
 
@@ -702,8 +694,7 @@ function verifier() {
     // =================================================
 
     if (
-        reponse.length >
-        bonne.length
+        reponse.length > bonne.length
     ) {
 
         document.getElementById(
@@ -712,7 +703,6 @@ function verifier() {
             "❌ Il y a trop d'éléments.";
 
         return;
-
     }
 
 
@@ -730,16 +720,13 @@ function verifier() {
     ) {
 
         if (
-            reponse[i] !==
-            bonne[i]
+            reponse[i] !== bonne[i]
         ) {
 
             correct = false;
 
             break;
-
         }
-
     }
 
 
@@ -764,8 +751,7 @@ function verifier() {
             "🎉 Bravo ! Très bien !";
 
 
-        // Prononcer le mot complet
-        // ou la phrase complète.
+        // Prononcer automatiquement
 
         ecouter();
 
@@ -784,7 +770,6 @@ function verifier() {
             "❌ Essaie encore !";
 
     }
-
 }
 
 
@@ -797,7 +782,6 @@ function effacer() {
     reponse = [];
 
     afficher();
-
 }
 
 
@@ -811,8 +795,7 @@ function suivant() {
 
 
     if (
-        numero >=
-        jeux[niveau].length
+        numero >= jeux[niveau].length
     ) {
 
         numero = 0;
@@ -821,14 +804,12 @@ function suivant() {
             "message"
         ).textContent =
             "🏆 Bravo ! Tu as terminé ce niveau !";
-
     }
 
 
     reponse = [];
 
     afficher();
-
 }
 
 
@@ -846,8 +827,7 @@ function melanger(tableau) {
 
         const j =
             Math.floor(
-                Math.random() *
-                (i + 1)
+                Math.random() * (i + 1)
             );
 
 
@@ -859,12 +839,10 @@ function melanger(tableau) {
             tableau[j],
             tableau[i]
         ];
-
     }
 
 
     return tableau;
-
 }
 
 
@@ -878,28 +856,11 @@ function ecouter() {
         jeux[niveau][numero];
 
 
-    // Utiliser le texte spécialement
-    // prévu pour la prononciation.
-    //
-    // Exemple :
-    //
-    // bonne = ["PA", "PA"]
-    //
-    // son = "papa"
-    //
-    // Le téléphone dira :
-    // "papa"
-    //
-    // et PAS :
-    // "PA PA"
-
     let texte =
         jeu.son;
 
 
-    // Sécurité :
-    // si son n'existe pas,
-    // reconstruire le texte.
+    // Sécurité si "son" n'existe pas
 
     if (!texte) {
 
@@ -916,12 +877,10 @@ function ecouter() {
                 jeu.bonne.join(" ");
 
         }
-
     }
 
 
     parler(texte);
-
 }
 
 
@@ -930,9 +889,6 @@ function ecouter() {
 // =====================================================
 
 function parler(texte) {
-
-    // Vérifier si la synthèse vocale
-    // existe sur le navigateur.
 
     if (
         !("speechSynthesis" in window)
@@ -944,17 +900,15 @@ function parler(texte) {
             "🔊 La synthèse vocale n'est pas disponible.";
 
         return;
-
     }
 
 
-    // Arrêter toute ancienne lecture.
+    // Arrêter une ancienne lecture
 
     window.speechSynthesis.cancel();
 
 
-    // Petit délai pour certains
-    // navigateurs Android.
+    // Petit délai utile sur Android
 
     setTimeout(
         function() {
@@ -965,47 +919,36 @@ function parler(texte) {
                 );
 
 
-            // =================================================
-            // LANGUE FRANÇAISE
-            // =================================================
+            // Français
 
             voix.lang = "fr-FR";
 
 
-            // Utiliser une vraie voix
-            // française si elle existe.
+            // Voix française disponible
 
             if (voixFrancaise) {
 
                 voix.voice =
                     voixFrancaise;
-
             }
 
 
-            // =================================================
-            // VITESSE
-            // =================================================
-
-            // 0.70 = assez lent pour
-            // un enfant.
+            // Vitesse adaptée à l'enfant
 
             voix.rate = 0.70;
 
 
-            // Ton normal.
+            // Ton normal
 
             voix.pitch = 1;
 
 
-            // Volume maximum.
+            // Volume maximum
 
             voix.volume = 1;
 
 
-            // =================================================
-            // LECTURE
-            // =================================================
+            // Lecture
 
             window.speechSynthesis.speak(
                 voix
@@ -1014,7 +957,6 @@ function parler(texte) {
         },
         100
     );
-
 }
 
 
