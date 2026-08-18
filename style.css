@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    text-align: center;
+}
+
+/* HEADER */
+
+header {
+    background: #ff8c00;
+    color: white;
+    padding: 18px 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+/* MENU */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    background: white;
+}
+
+nav button {
+    background: #eeeeee;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* CONTENU */
+
+main {
+    width: 95%;
+    max-width: 600px;
+    margin: auto;
+}
+
+#jeu {
+    background: white;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+}
+
+#image {
+    font-size: 65px;
+    margin: 10px;
+}
+
+#question {
+    font-size: 20px;
+}
+
+/* CONSTRUCTION */
+
+#construction {
+    min-height: 65px;
+    border: 2px dashed #aaa;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 15px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* MOTS */
+
+#mots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mot {
+    background: #ffffff;
+    border: 2px solid #555;
+    border-radius: 12px;
+    padding: 13px 17px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mot:active {
+    transform: scale(0.95);
+}
+
+.mot.utilise {
+    opacity: 0.35;
+}
+
+/* BOUTONS */
+
+.actions {
+    margin-top: 15px;
+}
+
+.actions button {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 16px;
+    margin: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.actions button:nth-child(1) {
+    background: #28a745;
+    color: white;
+}
+
+.actions button:nth-child(2) {
+    background: #dc3545;
+    color: white;
+}
+
+.actions button:nth-child(3) {
+    background: #007bff;
+    color: white;
+}
+
+.actions button:nth-child(4) {
+    background: #ff8c00;
+    color: white;
+}
+
+/* MESSAGE */
+
+#message {
+    min-height: 45px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 25px;
+    padding: 15px;
+    background: #333;
+    color: white;
+}
+
+/* SMARTPHONE */
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #jeu {
+        padding: 15px;
+    }
+
+    #image {
+        font-size: 55px;
+    }
+
+    .mot {
+        font-size: 18px;
+        padding: 12px 14px;
+    }
+
+    .actions button {
+        width: 90%;
+        margin: 5px auto;
+    }
+}
