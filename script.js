@@ -1,8 +1,17 @@
-// ===============================
+// =====================================================
+// JE JOUE ET J'APPRENDS LE FRANÇAIS
+// =====================================================
+
+
+// =====================================================
 // DONNÉES DU JEU
-// ===============================
+// =====================================================
 
 const jeux = {
+
+    // =================================================
+    // NIVEAU 1 : MOTS
+    // =================================================
 
     mots: [
 
@@ -33,75 +42,243 @@ const jeux = {
         {
             image: "🎒",
             bonne: ["CARTABLE"],
-            choix: ["CARTABLE", "ECOLE", "LIVRE", "TABLE"]
+            choix: [
+                "CARTABLE",
+                "ECOLE",
+                "LIVRE",
+                "TABLE"
+            ]
+        },
+
+        {
+            image: "🍋",
+            bonne: ["CITRON"],
+            choix: [
+                "CITRON",
+                "BANANE",
+                "POMME",
+                "POIRE"
+            ]
+        },
+
+        {
+            image: "🎩",
+            bonne: ["CHAPEAU"],
+            choix: [
+                "CHAPEAU",
+                "CARTABLE",
+                "MANTEAU",
+                "CHAUSSURE"
+            ]
         }
 
     ],
+
+
+    // =================================================
+    // NIVEAU 2 : SYLLABES
+    // =================================================
 
     syllabes: [
 
+        // MAMAN
         {
             image: "👩",
             bonne: ["MA", "MAN"],
-            choix: ["MAN", "PA", "MA", "LO"]
+            choix: ["MA", "MAN", "PA", "LO"]
         },
 
+        // PAPA
+        // IMPORTANT :
+        // deux PA sont nécessaires
         {
             image: "👨",
             bonne: ["PA", "PA"],
-            choix: ["PA", "MA", "LO", "MI"]
+            choix: ["PA", "PA", "MA", "LO"]
         },
 
+        // MOTO
         {
             image: "🏍️",
             bonne: ["MO", "TO"],
-            choix: ["TO", "MO", "MA", "PA"]
+            choix: ["MO", "TO", "MA", "PA"]
         },
 
+        // BANANE
         {
             image: "🍌",
             bonne: ["BA", "NA", "NE"],
-            choix: ["NE", "BA", "NA", "MA"]
+            choix: ["BA", "NA", "NE", "MA"]
         },
 
+        // CARTABLE
         {
             image: "🎒",
             bonne: ["CAR", "TA", "BLE"],
-            choix: ["BLE", "CAR", "TA", "MA"]
+            choix: ["CAR", "TA", "BLE", "MA"]
+        },
+
+        // CHAPEAU
+        {
+            image: "🎩",
+            bonne: ["CHA", "PEAU"],
+            choix: ["CHA", "PEAU", "PA", "LO"]
+        },
+
+        // CITRON
+        {
+            image: "🍋",
+            bonne: ["CI", "TRON"],
+            choix: ["CI", "TRON", "TA", "BLE"]
+        },
+
+        // BONJOUR
+        {
+            image: "👋",
+            bonne: ["BON", "JOUR"],
+            choix: ["BON", "JOUR", "MA", "PA"]
+        },
+
+        // MAISON
+        {
+            image: "🏠",
+            bonne: ["MAI", "SON"],
+            choix: ["MAI", "SON", "MA", "PA"]
+        },
+
+        // MATIN
+        {
+            image: "🌅",
+            bonne: ["MA", "TIN"],
+            choix: ["MA", "TIN", "TA", "LO"]
+        },
+
+        // PORTE
+        {
+            image: "🚪",
+            bonne: ["PORTE"],
+            choix: ["PORTE", "PA", "MA", "LO"]
         }
 
     ],
+
+
+    // =================================================
+    // NIVEAU 3 : PHRASES
+    // =================================================
 
     phrases: [
 
         {
             image: "🐱",
-            bonne: ["Le", "chat", "dort"],
-            choix: ["dort", "Le", "chat"]
+            bonne: [
+                "Le",
+                "chat",
+                "dort"
+            ],
+            choix: [
+                "dort",
+                "Le",
+                "chat"
+            ]
         },
 
         {
             image: "📖",
-            bonne: ["Papa", "lit", "un", "livre"],
-            choix: ["livre", "Papa", "un", "lit"]
+            bonne: [
+                "Papa",
+                "lit",
+                "un",
+                "livre"
+            ],
+            choix: [
+                "livre",
+                "Papa",
+                "un",
+                "lit"
+            ]
         },
 
         {
             image: "🍎",
-            bonne: ["Maman", "mange", "une", "pomme"],
-            choix: ["pomme", "une", "Maman", "mange"]
+            bonne: [
+                "Maman",
+                "mange",
+                "une",
+                "pomme"
+            ],
+            choix: [
+                "pomme",
+                "une",
+                "Maman",
+                "mange"
+            ]
         },
 
         {
             image: "⚽",
-            bonne: ["Ali", "joue", "au", "ballon"],
-            choix: ["ballon", "Ali", "au", "joue"]
+            bonne: [
+                "Ali",
+                "joue",
+                "au",
+                "ballon"
+            ],
+            choix: [
+                "ballon",
+                "Ali",
+                "au",
+                "joue"
+            ]
         },
 
         {
             image: "🏫",
-            bonne: ["Lina", "va", "à", "l'école"],
-            choix: ["l'école", "va", "Lina", "à"]
+            bonne: [
+                "Lina",
+                "va",
+                "à",
+                "l'école"
+            ],
+            choix: [
+                "l'école",
+                "va",
+                "Lina",
+                "à"
+            ]
+        },
+
+        {
+            image: "🥛",
+            bonne: [
+                "Le",
+                "bébé",
+                "boit",
+                "du",
+                "lait"
+            ],
+            choix: [
+                "lait",
+                "Le",
+                "boit",
+                "bébé",
+                "du"
+            ]
+        },
+
+        {
+            image: "🍽️",
+            bonne: [
+                "Papa",
+                "mange",
+                "le",
+                "repas"
+            ],
+            choix: [
+                "repas",
+                "Papa",
+                "le",
+                "mange"
+            ]
         }
 
     ]
@@ -109,9 +286,9 @@ const jeux = {
 };
 
 
-// ===============================
+// =====================================================
 // VARIABLES
-// ===============================
+// =====================================================
 
 let niveau = "mots";
 
@@ -122,9 +299,9 @@ let reponse = [];
 let score = 0;
 
 
-// ===============================
-// AFFICHER LE JEU
-// ===============================
+// =====================================================
+// CHANGER DE NIVEAU
+// =====================================================
 
 function afficherJeu(type) {
 
@@ -139,49 +316,160 @@ function afficherJeu(type) {
 }
 
 
-// ===============================
+// =====================================================
 // AFFICHER UNE QUESTION
-// ===============================
+// =====================================================
 
 function afficher() {
 
     const jeu = jeux[niveau][numero];
 
+
+    // IMAGE
+
     document.getElementById("image").textContent =
         jeu.image;
 
-    document.getElementById("construction").innerHTML = "";
 
-    document.getElementById("message").textContent = "";
+    // TITRE
 
-    const zone = document.getElementById("mots");
+    const question =
+        document.getElementById("question");
+
+
+    if (niveau === "mots") {
+
+        question.textContent =
+            "Construis le mot";
+
+    }
+
+    else if (niveau === "syllabes") {
+
+        question.textContent =
+            "Construis le mot avec les syllabes";
+
+    }
+
+    else {
+
+        question.textContent =
+            "Construis la phrase";
+
+    }
+
+
+    // INSTRUCTION
+
+    const info =
+        document.getElementById("info-niveau");
+
+
+    if (niveau === "mots") {
+
+        info.textContent =
+            "👆 Choisis le mot correspondant à l'image.";
+
+    }
+
+    else if (niveau === "syllabes") {
+
+        info.textContent =
+            "👆 Choisis les syllabes dans le bon ordre.";
+
+    }
+
+    else {
+
+        info.textContent =
+            "👆 Choisis les mots dans le bon ordre.";
+
+    }
+
+
+    // RESET
+
+    document.getElementById(
+        "construction"
+    ).innerHTML = "";
+
+
+    document.getElementById(
+        "message"
+    ).textContent = "";
+
+
+    // ZONE DES CARTES
+
+    const zone =
+        document.getElementById("mots");
 
     zone.innerHTML = "";
 
-    let choix = melanger([...jeu.choix]);
+
+    // IMPORTANT :
+    // On crée une carte pour CHAQUE occurrence.
+    //
+    // Exemple :
+    // ["PA","PA"]
+    //
+    // donnera :
+    //
+    // [PA] [PA]
+    //
+    // et non une seule carte PA.
+
+    const choix =
+        melanger([...jeu.choix]);
 
 
-    choix.forEach(function(element) {
+    choix.forEach(function(element, index) {
 
-        const bouton = document.createElement("button");
+        const bouton =
+            document.createElement("button");
+
 
         bouton.className = "mot";
 
-        bouton.textContent = element;
 
-        bouton.onclick = function() {
+        bouton.textContent =
+            element;
 
-            if (bouton.classList.contains("utilise")) {
-                return;
-            }
 
-            reponse.push(element);
+        // Identifiant unique
+        bouton.dataset.id =
+            index;
 
-            bouton.classList.add("utilise");
 
-            afficherConstruction();
+        bouton.onclick =
+            function() {
 
-        };
+                // Ne pas réutiliser
+                // le même bouton.
+
+                if (
+                    bouton.classList.contains(
+                        "utilise"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                reponse.push(element);
+
+
+                bouton.classList.add(
+                    "utilise"
+                );
+
+
+                afficherConstruction();
+
+            };
+
 
         zone.appendChild(bouton);
 
@@ -190,25 +478,34 @@ function afficher() {
 }
 
 
-// ===============================
-// AFFICHER LA RÉPONSE
-// ===============================
+// =====================================================
+// AFFICHER LA CONSTRUCTION
+// =====================================================
 
 function afficherConstruction() {
 
     const zone =
-        document.getElementById("construction");
+        document.getElementById(
+            "construction"
+        );
+
 
     zone.innerHTML = "";
+
 
     reponse.forEach(function(element) {
 
         const span =
             document.createElement("span");
 
-        span.className = "mot";
 
-        span.textContent = element;
+        span.className =
+            "mot";
+
+
+        span.textContent =
+            element;
+
 
         zone.appendChild(span);
 
@@ -217,53 +514,111 @@ function afficherConstruction() {
 }
 
 
-// ===============================
+// =====================================================
 // VÉRIFIER
-// ===============================
+// =====================================================
 
 function verifier() {
 
     const bonne =
         jeux[niveau][numero].bonne;
 
-    if (reponse.length !== bonne.length) {
 
-        document.getElementById("message").textContent =
+    // Pas assez d'éléments
+
+    if (
+        reponse.length <
+        bonne.length
+    ) {
+
+        document.getElementById(
+            "message"
+        ).textContent =
             "👆 Choisis tous les éléments.";
 
         return;
+
     }
 
+
+    // Trop d'éléments
+
+    if (
+        reponse.length >
+        bonne.length
+    ) {
+
+        document.getElementById(
+            "message"
+        ).textContent =
+            "❌ Il y a trop d'éléments.";
+
+        return;
+
+    }
+
+
+    // Comparaison
 
     let correct = true;
 
 
-    for (let i = 0; i < bonne.length; i++) {
+    for (
+        let i = 0;
+        i < bonne.length;
+        i++
+    ) {
 
-        if (reponse[i] !== bonne[i]) {
+        if (
+            reponse[i] !==
+            bonne[i]
+        ) {
 
             correct = false;
+
+            break;
 
         }
 
     }
 
 
+    // =================================================
+    // BONNE RÉPONSE
+    // =================================================
+
     if (correct) {
 
         score++;
 
-        document.getElementById("score").textContent =
+
+        document.getElementById(
+            "score"
+        ).textContent =
             "⭐ Score : " + score;
 
-        document.getElementById("message").textContent =
+
+        document.getElementById(
+            "message"
+        ).textContent =
             "🎉 Bravo ! Très bien !";
 
+
+        // Prononcer le mot ou la phrase
         ecouter();
 
-    } else {
+    }
 
-        document.getElementById("message").textContent =
+
+    // =================================================
+    // MAUVAISE RÉPONSE
+    // =================================================
+
+    else {
+
+        document.getElementById(
+            "message"
+        ).textContent =
             "❌ Essaie encore !";
 
     }
@@ -271,9 +626,9 @@ function verifier() {
 }
 
 
-// ===============================
+// =====================================================
 // EFFACER
-// ===============================
+// =====================================================
 
 function effacer() {
 
@@ -284,19 +639,29 @@ function effacer() {
 }
 
 
-// ===============================
+// =====================================================
 // QUESTION SUIVANTE
-// ===============================
+// =====================================================
 
 function suivant() {
 
     numero++;
 
-    if (numero >= jeux[niveau].length) {
+
+    if (
+        numero >=
+        jeux[niveau].length
+    ) {
 
         numero = 0;
 
+        document.getElementById(
+            "message"
+        ).textContent =
+            "🏆 Bravo ! Tu as terminé ce niveau !";
+
     }
+
 
     reponse = [];
 
@@ -305,9 +670,9 @@ function suivant() {
 }
 
 
-// ===============================
+// =====================================================
 // MÉLANGER
-// ===============================
+// =====================================================
 
 function melanger(tableau) {
 
@@ -318,7 +683,11 @@ function melanger(tableau) {
     ) {
 
         const j =
-            Math.floor(Math.random() * (i + 1));
+            Math.floor(
+                Math.random() *
+                (i + 1)
+            );
+
 
         [
             tableau[i],
@@ -331,40 +700,87 @@ function melanger(tableau) {
 
     }
 
+
     return tableau;
 
 }
 
 
-// ===============================
-// LIRE À VOIX HAUTE
-// ===============================
+// =====================================================
+// PRONONCIATION
+// =====================================================
 
 function ecouter() {
 
     const texte =
-        jeux[niveau][numero].bonne.join(" ");
+        jeux[niveau][numero]
+        .bonne
+        .join(" ");
 
-    if ("speechSynthesis" in window) {
 
-        const voix =
-            new SpeechSynthesisUtterance(texte);
-
-        voix.lang = "fr-FR";
-
-        voix.rate = 0.75;
-
-        speechSynthesis.cancel();
-
-        speechSynthesis.speak(voix);
-
-    }
+    parler(texte);
 
 }
 
 
-// ===============================
+// =====================================================
+// PRONONCER UN MOT / UNE PHRASE
+// =====================================================
+
+function parler(texte) {
+
+    if (
+        !("speechSynthesis" in window)
+    ) {
+
+        document.getElementById(
+            "message"
+        ).textContent =
+            "🔊 La synthèse vocale n'est pas disponible.";
+
+        return;
+
+    }
+
+
+    // Arrêter une ancienne lecture
+
+    window.speechSynthesis.cancel();
+
+
+    const voix =
+        new SpeechSynthesisUtterance(
+            texte
+        );
+
+
+    // Français
+
+    voix.lang = "fr-FR";
+
+
+    // Vitesse plus lente
+    // pour l'enfant
+
+    voix.rate = 0.72;
+
+
+    // Ton légèrement naturel
+
+    voix.pitch = 1;
+
+
+    // Lancer
+
+    window.speechSynthesis.speak(
+        voix
+    );
+
+}
+
+
+// =====================================================
 // DÉMARRAGE
-// ===============================
+// =====================================================
 
 afficher();
