@@ -477,25 +477,29 @@ function afficher() {
 
     if (niveau === "mots") {
 
-        info.textContent =
-            "👆 Choisis le mot correspondant à l'image.";
+    question.textContent =
+        "Trouve le mot";
 
-    }
+}
 
-    else if (niveau === "syllabes") {
+else if (niveau === "syllabes") {
 
-        info.textContent =
-            "👆 Choisis les syllabes dans le bon ordre.";
+    question.textContent =
+        "Construis le mot avec les syllabes";
 
-    }
+}
+else if (niveau === "couleurs") {
 
-    else {
+    question.textContent =
+        "Trouve la couleur";
 
-        info.textContent =
-            "👆 Choisis les mots dans le bon ordre.";
+}
+else if (niveau === "phrases") {
 
-    }
+    question.textContent =
+        "Construis la phrase";
 
+}
 
     // =================================================
     // RESET
