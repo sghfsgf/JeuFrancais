@@ -166,7 +166,22 @@
 <!-- ==================================================
      JAVASCRIPT
 ================================================== -->
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker.register("./sw.js")
+            .then(function() {
+                console.log("Service Worker installé");
+            })
+            .catch(function(erreur) {
+                console.log("Erreur Service Worker :", erreur);
+            });
+    });
+}
+</script>
 
+<script src="script.js"></script>
+    
 <script src="script.js"></script>
 
 
