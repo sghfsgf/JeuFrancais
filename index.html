@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Je joue et j'apprends le français</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🇫🇷 Je joue et j'apprends</h1>
+    <p>Français – 3e année primaire</p>
+</header>
+
+<nav>
+    <button onclick="afficherJeu('mots')">
+        🧩 Mots
+    </button>
+
+    <button onclick="afficherJeu('syllabes')">
+        🔤 Syllabes
+    </button>
+
+    <button onclick="afficherJeu('phrases')">
+        📝 Phrases
+    </button>
+</nav>
+
+<main>
+
+    <div id="jeu">
+
+        <div id="image">🐱</div>
+
+        <h2 id="question">
+            Construis le mot
+        </h2>
+
+        <div id="construction"></div>
+
+        <div id="mots"></div>
+
+        <div class="actions">
+
+            <button onclick="verifier()">
+                ✅ Vérifier
+            </button>
+
+            <button onclick="effacer()">
+                ↩ Effacer
+            </button>
+
+            <button onclick="ecouter()">
+                🔊 Écouter
+            </button>
+
+            <button onclick="suivant()">
+                ➡️ Suivant
+            </button>
+
+        </div>
+
+        <div id="message"></div>
+
+        <div id="score">
+            ⭐ Score : 0
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    Français – Apprendre en jouant ❤️
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
