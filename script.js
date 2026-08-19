@@ -34,7 +34,7 @@ const jeux = {
             image: "images/enseignante.jpg",
             bonne: ["ENSEIGNANTE"],
             choix: ["ENSEIGNANTE", "ÉLÈVE", "COLLÈGUE", "CONCIERGE"],
-            son: "l'enseignant"
+            son: "l'enseignante"
         },
 
         {
@@ -68,21 +68,21 @@ const jeux = {
         {
             image: "images/amie.jpg",
             bonne: ["AMIE"],
-            choix: ["AMIE", "ENSEIGNANT", "ÉLÈVE", "COLLÈGUE"],
+            choix: ["AMIE", "ENSEIGNANTE", "ÉLÈVE", "COLLÈGUE"],
             son: "une amie"
         },
 
         {
             image: "images/collegue.jpg",
             bonne: ["COLLÈGUE"],
-            choix: ["COLLÈGUE", "AMIE", "ENSEIGNANT", "CONCIERGE"],
+            choix: ["COLLÈGUE", "AMIE", "ENSEIGNANTE", "CONCIERGE"],
             son: "un collègue"
         },
 
         {
             image: "images/concierge.jpg",
             bonne: ["CONCIERGE"],
-            choix: ["CONCIERGE", "ENSEIGNANT", "COLLÈGUE", "ÉLÈVE"],
+            choix: ["CONCIERGE", "ENSEIGNANTE", "COLLÈGUE", "ÉLÈVE"],
             son: "le concierge"
         },
 
