@@ -299,6 +299,20 @@ const jeux = {
         },
 
         {
+        image: "🌳",
+        bonne: ["AR", "BRE"],
+        choix: ["AR", "BRE", "BI", "CY"],
+        son: "arbre"
+    },
+
+    {
+        image: "🚲",
+        bonne: ["BI", "CY", "CLETTE"],
+        choix: ["BI", "CY", "CLETTE", "AR"],
+        son: "bicyclette"
+    },
+
+        {
             image: "🚪",
             bonne: ["PORTE"],
             choix: ["PORTE", "PA", "MA", "LO"],
