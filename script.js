@@ -11,72 +11,212 @@ const jeux = {
 
     // =================================================
     // NIVEAU 1 : MOTS
+    // VOCABULAIRE DE L'ÉCOLE ET DE LA VIE QUOTIDIENNE
     // =================================================
 
     mots: [
 
         {
-            image: "👩",
-            bonne: ["MAMAN"],
-            choix: ["MAMAN", "PAPA", "CHAT", "SAC"],
-            son: "maman"
+            image: "images/porte.jpg",
+            bonne: ["PORTE"],
+            choix: ["PORTE", "TABLE", "LIVRE", "STYLO"],
+            son: "la porte"
         },
 
         {
-            image: "👨",
-            bonne: ["PAPA"],
-            choix: ["PAPA", "MAMAN", "LIVRE", "MOTO"],
-            son: "papa"
+            image: "images/drapeau.jpg",
+            bonne: ["DRAPEAU"],
+            choix: ["DRAPEAU", "TABLEAU", "CARTABLE", "CHAISE"],
+            son: "le drapeau"
         },
 
         {
-            image: "🐱",
-            bonne: ["CHAT"],
-            choix: ["CHAT", "CHIEN", "SAC", "LAPIN"],
-            son: "chat"
+            image: "images/enseignant.jpg",
+            bonne: ["ENSEIGNANT"],
+            choix: ["ENSEIGNANT", "ÉLÈVE", "COLLÈGUE", "CONCIERGE"],
+            son: "l'enseignant"
         },
 
         {
-            image: "🏍️",
-            bonne: ["MOTO"],
-            choix: ["MOTO", "MAISON", "CHAT", "VELO"],
-            son: "moto"
+            image: "images/tableau.jpg",
+            bonne: ["TABLEAU"],
+            choix: ["TABLEAU", "ARDOISE", "CAHIER", "LIVRE"],
+            son: "le tableau"
         },
 
         {
-            image: "🎒",
+            image: "images/ardoise.jpg",
+            bonne: ["ARDOISE"],
+            choix: ["ARDOISE", "TABLEAU", "GOMME", "RÈGLE"],
+            son: "l'ardoise"
+        },
+
+        {
+            image: "images/chaise.jpg",
+            bonne: ["CHAISE"],
+            choix: ["CHAISE", "TABLE", "PORTE", "CARTABLE"],
+            son: "la chaise"
+        },
+
+        {
+            image: "images/table.jpg",
+            bonne: ["TABLE"],
+            choix: ["TABLE", "CHAISE", "TABLEAU", "ARDOISE"],
+            son: "la table"
+        },
+
+        {
+            image: "images/amie.jpg",
+            bonne: ["AMIE"],
+            choix: ["AMIE", "ENSEIGNANT", "ÉLÈVE", "COLLÈGUE"],
+            son: "une amie"
+        },
+
+        {
+            image: "images/collegue.jpg",
+            bonne: ["COLLÈGUE"],
+            choix: ["COLLÈGUE", "AMIE", "ENSEIGNANT", "CONCIERGE"],
+            son: "un collègue"
+        },
+
+        {
+            image: "images/concierge.jpg",
+            bonne: ["CONCIERGE"],
+            choix: ["CONCIERGE", "ENSEIGNANT", "COLLÈGUE", "ÉLÈVE"],
+            son: "le concierge"
+        },
+
+        {
+            image: "images/sonnerie.jpg",
+            bonne: ["SONNERIE"],
+            choix: ["SONNERIE", "PLUIE", "PORTE", "CLASSE"],
+            son: "la sonnerie"
+        },
+
+        {
+            image: "images/pluie.jpg",
+            bonne: ["PLUIE"],
+            choix: ["PLUIE", "SONNERIE", "EAU", "CLASSE"],
+            son: "la pluie"
+        },
+
+        {
+            image: "images/classe.jpg",
+            bonne: ["CLASSE"],
+            choix: ["CLASSE", "TABLEAU", "ÉCOLE", "PORTE"],
+            son: "la classe"
+        },
+
+        {
+            image: "images/trottoir.jpg",
+            bonne: ["TROTTOIR"],
+            choix: ["TROTTOIR", "ROBINET", "PORTE", "TABLE"],
+            son: "le trottoir"
+        },
+
+        {
+            image: "images/robinet.jpg",
+            bonne: ["ROBINET"],
+            choix: ["ROBINET", "BOUTEILLE", "VERRE", "TROTTOIR"],
+            son: "le robinet"
+        },
+
+        {
+            image: "images/verre-eau.jpg",
+            bonne: ["VERRE D'EAU"],
+            choix: ["VERRE D'EAU", "BOUTEILLE", "ROBINET", "PLUIE"],
+            son: "un verre d'eau"
+        },
+
+        {
+            image: "images/bouteille.jpg",
+            bonne: ["BOUTEILLE"],
+            choix: ["BOUTEILLE", "VERRE D'EAU", "ROBINET", "CARTABLE"],
+            son: "une bouteille"
+        },
+
+        {
+            image: "images/cartable.jpg",
             bonne: ["CARTABLE"],
-            choix: [
-                "CARTABLE",
-                "ECOLE",
-                "LIVRE",
-                "TABLE"
-            ],
-            son: "cartable"
+            choix: ["CARTABLE", "CAHIER", "SAC", "TABLEAU"],
+            son: "le cartable"
         },
 
         {
-            image: "🍋",
-            bonne: ["CITRON"],
-            choix: [
-                "CITRON",
-                "BANANE",
-                "POMME",
-                "POIRE"
-            ],
-            son: "citron"
+            image: "images/stylo.jpg",
+            bonne: ["STYLO"],
+            choix: ["STYLO", "CRAYON", "GOMME", "LIVRE"],
+            son: "le stylo"
         },
 
         {
-            image: "🎩",
-            bonne: ["CHAPEAU"],
-            choix: [
-                "CHAPEAU",
-                "CARTABLE",
-                "MANTEAU",
-                "CHAUSSURE"
-            ],
-            son: "chapeau"
+            image: "images/chiffon.jpg",
+            bonne: ["CHIFFON"],
+            choix: ["CHIFFON", "MOUCHOIR", "SERVIETTE", "GOMME"],
+            son: "le chiffon"
+        },
+
+        {
+            image: "images/crayon.jpg",
+            bonne: ["CRAYON"],
+            choix: ["CRAYON", "STYLO", "GOMME", "RÈGLE"],
+            son: "le crayon"
+        },
+
+        {
+            image: "images/lunettes.jpg",
+            bonne: ["LUNETTES"],
+            choix: ["LUNETTES", "CLÉ", "CRAYON", "GOMME"],
+            son: "les lunettes"
+        },
+
+        {
+            image: "images/cle.jpg",
+            bonne: ["CLÉ"],
+            choix: ["CLÉ", "LUNETTES", "PORTE", "STYLO"],
+            son: "la clé"
+        },
+
+        {
+            image: "images/gomme.jpg",
+            bonne: ["GOMME"],
+            choix: ["GOMME", "CRAYON", "STYLO", "CAHIER"],
+            son: "la gomme"
+        },
+
+        {
+            image: "images/cahier.jpg",
+            bonne: ["CAHIER"],
+            choix: ["CAHIER", "LIVRE", "CARTABLE", "TABLEAU"],
+            son: "le cahier"
+        },
+
+        {
+            image: "images/livre.jpg",
+            bonne: ["LIVRE"],
+            choix: ["LIVRE", "CAHIER", "STYLO", "CARTABLE"],
+            son: "le livre"
+        },
+
+        {
+            image: "images/serviette.jpg",
+            bonne: ["SERVIETTE"],
+            choix: ["SERVIETTE", "CHIFFON", "MOUCHOIR", "TABLIER"],
+            son: "la serviette"
+        },
+
+        {
+            image: "images/tablier.jpg",
+            bonne: ["TABLIER"],
+            choix: ["TABLIER", "SERVIETTE", "CARTABLE", "MANTEAU"],
+            son: "le tablier"
+        },
+
+        {
+            image: "images/mouchoir.jpg",
+            bonne: ["MOUCHOIR"],
+            choix: ["MOUCHOIR", "SERVIETTE", "CHIFFON", "CAHIER"],
+            son: "le mouchoir"
         }
 
     ],
@@ -183,7 +323,7 @@ const jeux = {
         },
 
         {
-           image: "🔵☁️",
+            image: "🔵☁️",
             bonne: ["BLEU"],
             choix: ["BLEU", "ROUGE", "JAUNE"],
             son: "bleu. Le ciel est bleu.",
@@ -408,9 +548,38 @@ function afficher() {
     // IMAGE
     // =================================================
 
-    document.getElementById(
-        "image"
-    ).textContent = jeu.image;
+    const zoneImage =
+        document.getElementById("image");
+
+    zoneImage.innerHTML = "";
+
+    // Pour les mots, afficher la vraie photo
+    // Pour les autres niveaux, conserver les emojis
+
+    if (
+        niveau === "mots" &&
+        jeu.image &&
+        jeu.image.startsWith("images/")
+    ) {
+
+        const img =
+            document.createElement("img");
+
+        img.src = jeu.image;
+
+        img.alt =
+            jeu.son || jeu.bonne.join(" ");
+
+        zoneImage.appendChild(img);
+
+    }
+
+    else {
+
+        zoneImage.textContent =
+            jeu.image;
+
+    }
 
 
     // =================================================
