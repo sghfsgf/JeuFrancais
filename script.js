@@ -31,9 +31,9 @@ const jeux = {
         },
 
         {
-            image: "images/enseignant.jpg",
-            bonne: ["ENSEIGNANT"],
-            choix: ["ENSEIGNANT", "ÉLÈVE", "COLLÈGUE", "CONCIERGE"],
+            image: "images/enseignante.jpg",
+            bonne: ["ENSEIGNANTE"],
+            choix: ["ENSEIGNANTE", "ÉLÈVE", "COLLÈGUE", "CONCIERGE"],
             son: "l'enseignant"
         },
 
